@@ -1,0 +1,4 @@
+print("Olá github!")
+iniciante= "github"
+frase= "sou iniciante em "
+print(frase+iniciante)

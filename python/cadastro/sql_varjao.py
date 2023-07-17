@@ -33,7 +33,7 @@ class BancoDados:
 			print('Dados inseridos com sucesso!')
 			return True
 		except sql.Error as e:
-			print('Erro SQLite: ',e)
+			print('Erro SQLite: 1',e)
 			return False
 		finally:
 			self.desconectar_bd()
@@ -52,7 +52,7 @@ class BancoDados:
 			print('Dados com key inseridos com sucesso!')
 			return True
 		except sql.Error as e:
-			print('Erro SQLite: ',e)
+			print('Erro SQLite: 2',e)
 			return False
 		finally:
 			self.desconectar_bd()
@@ -69,7 +69,7 @@ class BancoDados:
 			print('Registro excluído com sucesso!')
 			return True
 		except sql.Error as e:
-			print('Erro SQLite: ',e)
+			print('Erro SQLite: 3',e)
 			return False
 		finally:
 			self.desconectar_bd()
@@ -95,7 +95,7 @@ class BancoDados:
 			return True
     
 		except sql.Error as e:
-			print('Erro SQLite: ',e)
+			print('Erro SQLite: 4',e)
 			return False
 		finally:
 			self.desconectar_bd()
@@ -109,7 +109,7 @@ class BancoDados:
 			self.cursor.execute(f'SELECT * FROM {nome_tabela}')
 			dados_tab = self.cursor.fetchall()
 		except sql.Error as e:
-			print('Erro SQLite: ',e)
+			print('Erro SQLite: 5',e)
 		finally:
 			self.desconectar_bd()
 			return dados_tab
@@ -130,7 +130,7 @@ class BancoDados:
 			else:
 				return False
 		except sql.Error as e:
-			print('Erro SQLite: ',e)
+			print('Erro SQLite: 6',e)
 			return False
 		finally:
 			self.desconectar_bd()
@@ -144,7 +144,7 @@ class BancoDados:
 			self.cursor.execute(
 				f'CREATE TABLE IF NOT EXISTS {nome_tb} ({fields_str})')
 		except sql.Error as e:
-			print('Erro SQLite: ',e)
+			print('Erro SQLite: 7',e)
 			print(f'Erro na criação da tabela: ',nome_tb)
 		finally:
 			self.desconectar_bd()
@@ -173,7 +173,7 @@ class BancoDados:
 			dados = self.cursor.fetchall()
 			return dados
 		except sql.Error as e:
-			print('Erro SQLite: ',e)
+			print('Erro SQLite: 8',e)
 			return False
 		finally:			
 			self.desconectar_bd()
@@ -193,7 +193,7 @@ class BancoDados:
 			resultado_unico = self.cursor.fetchone()
 			return [resultado_unico]#precisa alterar
 		except sql.Error as e:
-			print('Erro SQLite: ',e)
+			print('Erro SQLite: 9',e)
 			return False
 		finally:
 			self.desconectar_bd()
@@ -208,7 +208,7 @@ class BancoDados:
 			resultado = self.cursor.fetchone()
 			return resultado
 		except sql.Error as e:
-			print('Erro SQLite: ',e)
+			print('Erro SQLite: 10',e)
 			return False
 		finally:
 			self.desconectar_bd()

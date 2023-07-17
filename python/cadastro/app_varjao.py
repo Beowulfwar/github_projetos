@@ -8,7 +8,6 @@ importlib.reload(cv)
 importlib.reload(s)
 
 # chama as classes utilizadas
-p = cv.Produtos()
 b = s.BancoDados('varjao.db')
 c = cv.Consultas()
 v = cv.Vendas()
@@ -18,7 +17,6 @@ f = cv.Fiscal()
 
 # guarda a situação de uma janela
 janela_aberta = False
-
 
 class Principal:
     tamanho_minimo = 1
